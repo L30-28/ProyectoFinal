@@ -1,0 +1,52 @@
+{% extends "PisandoFuerte/index.html" %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Remeras</h1>
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<table>
+    <tr>
+        <td width="200"><h2>Remeras</h2></td>
+        <td>
+            <a
+            href="{% url 'remeras_create' %}"
+            class="btn btn-primary btn-sm"
+            ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>        
+    </tr>
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Color</th>
+            <th>Talle</th>
+        
+        
+        </tr>
+    </thead>
+    <tbody>
+    {% for r in remeras_list  %}
+        <tr>
+            <td>{{ r.id }}</td>
+            <td>{{ r.color }}</td>
+            <td>{{ r.talle }}</td>
+            <td>
+                <a href="{% url 'remeras_update' r.id %}" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                    <i class="fa fa-edit fa-sm" title="Editar"></i> Editar
+                </a>
+                <a href="{% url 'remeras_delete' r.id %}" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                    <i class="fa fa-trash fa-sm" title="Eliminar"></i> Eliminar
+                </a>                
+            </td> 
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

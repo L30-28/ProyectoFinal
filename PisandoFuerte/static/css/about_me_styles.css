@@ -1,0 +1,70 @@
+/* about_me_styles.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #333;
+}
+
+main {
+    margin-bottom: 30px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #555;
+}
+
+p, ul {
+    color: #777;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    color: #999;
+}
+
+/* Estilos específicos */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+.profile-image {
+    max-width: 300px; /* Establece el ancho máximo deseado para la imagen */
+    height: auto; /* Hace que la altura se ajuste automáticamente para mantener la relación de aspecto */
+    float: left; /* Hace que la imagen flote hacia la izquierda */
+    margin-right: 50px; /* Agrega un margen a la derecha para separar la imagen del texto */
+}
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}

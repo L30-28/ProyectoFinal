@@ -1,0 +1,52 @@
+{% extends "PisandoFuerte/index.html" %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Adidas</h1>
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<table>
+    <tr>
+        <td width="200"><h2>Adidas</h2></td>
+        <td>
+            <a
+            href="{% url 'adidas_create' %}"
+            class="btn btn-primary btn-sm"
+            ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>        
+    </tr>
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Modelo</th>
+            <th>Talle</th>
+        
+        
+        </tr>
+    </thead>
+    <tbody>
+    {% for a in adidas_list  %}
+        <tr>
+            <td>{{ a.id }}</td>
+            <td>{{ a.modelo }}</td>
+            <td>{{ a.talle }}</td>
+            <td>
+    <a href="{% url 'adidas_update' a.id %}" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+        <i class="fa fa-edit fa-sm" title="Editar"></i> Editar
+    </a>
+    <a href="{% url 'adidas_delete' a.id %}" class="btn btn-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+        <i class="fa fa-trash fa-sm" title="Eliminar"></i> Eliminar
+    </a>                
+</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

@@ -1,0 +1,44 @@
+<!-- about_me.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de mí</title>
+    <!-- Cargar la hoja de estilos -->
+    <link rel="stylesheet" href="{% static 'css/about_me_styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Acerca de mí</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Mi Historia</h2>
+                <p>Mi nombre es Leonel, tengo 21 años, soy estudiante de ingeniería electrónica en UTN, Cordobés, 
+                    ingresé a este curso para poder profesionalizarme en mi carrera y abrirme a oportunidades de empleo.
+                    Me gustan y siempre me interesaron las zapatillas, de allí el tema de mi página web.</p>
+            </section>
+            <section>
+                <h2>Mi Foto</h2>
+                <img src="{% static 'assets/mifoto.jpg' %}" alt="Foto de perfil" class="profile-image">
+            </section>
+            <br>
+            <section>
+                <h2>Mis Intereses</h2>
+                <ul>
+                    <li>Cine</li>
+                    <li>Basketball</li>
+                    <li>Fórmula 1</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Pisando Fuerte</p>
+        </footer>
+    </div>
+</body>
+</html>
+
